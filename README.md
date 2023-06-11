@@ -4,6 +4,22 @@
 - Django
 - Venv
 
+## Building Project
+This project is setup to build docker images and push them to docker hub automatically on a new release. There is an actions
+workflow and Dockerfile that take care of it.
+
+### Building Locally
+Build docker images of this project locally with
+
+    $ docker build -t django-ecommerce:latest -f Dockerfile .
+
+### Releasing new Images
+Pushing to the branch `master` or pushing a tag with the [semver](https://semver.org) versioning scheme will trigger a build and push to the docker hub repository [joedegs/django-e-commerce](https://hub.docker.com/r/joedegs/django-e-commerce)
+
+### Getting new Images from DockerHub
+Download latest images from django using
+
+    $ docker pull joedegs/django-e-commerce 
 
 ### Photos
 
